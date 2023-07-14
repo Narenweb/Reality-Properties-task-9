@@ -248,6 +248,10 @@ a {
   border: 2px solid #ff9f00;
   color: #004dff;
 }
+.villa-label:hover {
+  background-color: #ff9f00;
+  color: #ffffff;
+}
 
 .featured-property .card-wrapper {
   display: flex;
@@ -297,7 +301,7 @@ a {
 
 .card-beds::before {
   content: "";
-  background-image: url("/Assets/icon-1.png");
+  background-image: url("https://i.postimg.cc/tJy3BqMW/icon-1.png");
   margin-right: 15px;
   background-size: cover;
   width: 35px;
@@ -307,7 +311,7 @@ a {
 
 .card-baths::before {
   content: "";
-  background-image: url("/Assets/icon-2.png");
+  background-image: url("https://i.postimg.cc/HsFxmZTP/icon-2.png");
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -318,7 +322,7 @@ a {
 
 .card-sqft::before {
   content: "";
-  background-image: url("/Assets/icon-3.png");
+  background-image: url("https://i.postimg.cc/g0HkvG8f/icon-3.png`");
   background-size: cover;
   margin-right: 15px;
   width: 35px;
@@ -503,7 +507,7 @@ a {
   }
 }
 .hero {
-  background-image: url("https://i.ibb.co/PxhYxV5/background.png");
+  background-image: url("https://i.postimg.cc/Gt20TCxJ/background.png");
   background-size: cover;
   height: 723px;
   margin-bottom: 96px;
@@ -548,7 +552,7 @@ a {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-image: url("/Assets/search.png");
+  background-image: url("https://i.postimg.cc/mr5ppHYM/search.png");
   background-size: cover;
   cursor: pointer;
 }
@@ -606,7 +610,7 @@ a {
 }
 
 .villa-section {
-  background-image: url("/Assets/background-image-copy.png");
+  background-image: url("https://i.postimg.cc/cLZQZLxz/background-image-copy.png");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -649,7 +653,7 @@ a {
 }
 .villa-section .container .contact-card::before {
   content: " ";
-  background-image: url("/Assets/man.png");
+  background-image: url("https://i.postimg.cc/85cT8Mfb/man.png");
   background-position: center;
   background-size: cover;
   position: absolute;

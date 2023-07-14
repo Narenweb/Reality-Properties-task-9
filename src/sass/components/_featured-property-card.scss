@@ -59,7 +59,7 @@
 .card-beds {
     &::before {
         content: "";
-        background-image: url('/Assets/icon-1.png');
+        background-image: url('https://i.postimg.cc/tJy3BqMW/icon-1.png');
         margin-right: 15px;
         background-size: cover;
         width: 35px;
@@ -71,21 +71,20 @@
 .card-baths {
     &::before {
         content: "";
-        background-image: url('/Assets/icon-2.png');
+        background-image: url('https://i.postimg.cc/HsFxmZTP/icon-2.png');
         background-size: cover;
         width: 50px;
         height: 50px;
         display: inline-block;
         position: relative;
         top: 13px;
-
     }
 }
 
 .card-sqft {
     &::before {
         content: "";
-        background-image: url('/Assets/icon-3.png');
+        background-image: url('https://i.postimg.cc/g0HkvG8f/icon-3.png`');
         background-size: cover;
         margin-right: 15px;
         width: 35px;

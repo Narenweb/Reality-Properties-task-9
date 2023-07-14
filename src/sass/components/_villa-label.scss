@@ -5,4 +5,8 @@
     display: inline-block;
    margin-bottom: 27px;
    line-height: normal;
+   &:hover{
+    background-color: #ff9f00;
+    color: $light-color;
+   }
 }
