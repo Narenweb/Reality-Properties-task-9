@@ -1,0 +1,25 @@
+.primary-btn-sm{
+    @include btn(#004dff);
+    padding: 5px 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.primary-btn-md{
+    @include btn(#004dff);
+    padding: 15px 26px;
+    position: absolute;
+    left:70%;
+    bottom: 24px;
+    line-height: normal;
+}
+
+.secondary-btn {
+    @include btn(#1dc679);
+    padding: 15px 22.5px;
+    &:hover{
+        background-color: #fff;
+        color: #1dc679;
+    }
+}
+

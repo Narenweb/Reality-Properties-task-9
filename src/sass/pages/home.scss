@@ -1,0 +1,24 @@
+// --------Base imports--------
+@import '../base/reset';
+@import '../base/typography';
+
+// --------Utils imports--------
+@import '../utils/helpers';
+@import '../utils/mixins';
+@import '../utils/variables';
+
+// --------Components imports--------
+@import '../components/button';
+@import '../components/dropdown';
+@import '../components/testimonials';
+@import '../components/villa-label';
+@import '../components/featured-property-card';
+
+// --------Layout imports--------
+@import '../layout/header';
+@import '../layout/hero';
+@import '../layout/featured-property';
+@import '../layout/property-information';
+@import '../layout/villa-section';
+@import '../layout/_client-card-section';
+@import '../layout/footer';

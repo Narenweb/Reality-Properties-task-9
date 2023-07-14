@@ -1,0 +1,97 @@
+.featured-property{
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+            width: 340px;
+            height: 420px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            border: solid 2px #f0f0f1;
+            background-color: $light-color;
+
+            .card-img {
+                width: 337px;
+                height: 200px;
+                margin-bottom: 19px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+
+            }
+
+            .card-body {
+                padding: 0 0 50px 20px;
+                color: #454545;
+
+                .card-title {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                }
+
+                .card-price {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #004dff;
+                }
+
+                .card-description {
+                    margin-bottom: 11px;
+                    font-size: 14px;
+                }
+
+            }
+
+
+        }
+    }
+
+}
+.details {
+    display: inline;
+    opacity: 0.7;
+    font-size: 14px;
+    color: #454545;
+}
+
+.card-beds {
+    &::before {
+        content: "";
+        background-image: url('/Assets/icon-1.png');
+        margin-right: 15px;
+        background-size: cover;
+        width: 35px;
+        height: 25px;
+        display: inline-block;
+    }
+}
+
+.card-baths {
+    &::before {
+        content: "";
+        background-image: url('/Assets/icon-2.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        top: 13px;
+
+    }
+}
+
+.card-sqft {
+    &::before {
+        content: "";
+        background-image: url('/Assets/icon-3.png');
+        background-size: cover;
+        margin-right: 15px;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        position: relative;
+        top: 5px;
+    }
+}

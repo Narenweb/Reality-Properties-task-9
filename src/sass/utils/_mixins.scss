@@ -1,0 +1,34 @@
+$breakpoints:(
+    "viewport-sm":480px,
+    "viewport-md":769px,
+    "viewport-lg":930px,
+    "viewport-xl":1070px,
+);
+@mixin breakpoints($bp){
+    @media (max-width:$bp){
+      @content;
+    }
+  }
+
+@mixin information-card($bg-color){
+  width: 500px;
+  padding: 46px 124px 60px 50px;
+  border-radius: 5px;
+  background-color: $bg-color;
+}
+@mixin btn($bg-color){
+  color: $light-color;
+  background-color: $bg-color;
+  line-height: 3.57;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  &:hover{
+    background-color: transparent;
+    transition: 0.2s ease-in;
+    border: 2px solid $bg-color;
+    color: #004dff;
+  }
+}
