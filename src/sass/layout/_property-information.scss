@@ -2,44 +2,60 @@
     margin-bottom: 100px;
 
     .information-card-wrapper {
-        display: flex;
-        justify-content: space-between;
-
         .information-card {
-            @include information-card(#f6f7f9);
+            @include information-card($light-color-1);
 
             h2 {
                 width: 366px;
                 margin-bottom: 14px;
-                font-size: 44px;
                 color: #004dff;
             }
 
             p {
                 margin-bottom: 19px;
-                font-size: 18px;
                 color: #454545;
             }
 
         }
 
         .contact-card {
-            @include information-card(#004dff);
+            @include information-card($primary-color);
 
             h2 {
                 width: 264px;
-                margin: 0 66px 14px 0;
-                font-size: 44px;
+                margin-bottom: 14px;
                 font-weight: bold;
                 color: $light-color;
             }
 
             p {
-                margin: 14px 0 26px;
+                margin-bottom: 26px;
                 color: $light-color;
             }
 
         }
 
+    }
+}
+
+@include breakpoints(map-get($breakpoints, "viewport-sm")) {
+    .property-information{
+        .information-card-wrapper{
+            flex-direction: column;
+            .information-card{
+                padding: 46px 30px 60px;
+                width: 100%;
+                h2{
+                    width: 100%;
+                    font-size: 22px;
+                }
+            }
+            .contact-card{
+                width: 100%;
+                h2{
+                    width: 100%;
+                }
+            }
+        }
     }
 }

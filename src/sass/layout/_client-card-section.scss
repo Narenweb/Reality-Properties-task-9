@@ -1,18 +1,22 @@
 .client-card-section{
    margin-bottom: 100px;
     position: relative;
-    display: flex;
-    flex-direction: column;
     .container-box{
         overflow: hidden;
         margin-left: 60px; 
     
     }
     h2{
-        font-size: 32px;
         font-weight: bold;
         letter-spacing: -1px;
         text-align: center;
         margin-bottom: 81px;
     }
+}
+@include breakpoints(map-get($breakpoints, "viewport-sm")){
+.client-card-section{
+    .container-box{
+        margin-left: 14px;
+    }
+}
 }

@@ -1,12 +1,12 @@
 .villa-label{
-    @include btn(#ff9f00);
+    @include btn($tertiary-color);
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
    margin-bottom: 27px;
    line-height: normal;
    &:hover{
-    background-color: #ff9f00;
+    background-color: $tertiary-color;
     color: $light-color;
    }
 }

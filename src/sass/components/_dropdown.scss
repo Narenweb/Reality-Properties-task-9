@@ -1,12 +1,11 @@
 .dropdown {
     width: 150px;
     height: 50px;
-    background: white;
+    background: $light-color;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 0 10px 25px rgba(42, 179, 248, 0.4);
     position: relative;
-    display: flex;
     float: left;
     border-right: 1px solid $dark-color;
 
@@ -18,7 +17,7 @@
         z-index: 1;
         width: 12px;
         height: 12px;
-        border: 2px solid grey;
+        border: 2px solid $dark-color-1;
         border-top: transparent;
         border-right: transparent;
         transform: rotate(-45deg);
@@ -33,7 +32,6 @@
         border: none;
         outline: none;
         box-shadow: 0 10px 25px rgba(124, 130, 141, 0.2);
-        font-size: 20px;
         position: absolute;
         top: 0;
         left: 0;
@@ -44,11 +42,10 @@
         border-radius: 9px;
         padding: 8px;
         cursor: pointer;
-        background: white;
+        background: $light-color;
         border: none;
         outline: none;
         box-shadow: 0 10px 25px rgba(124, 130, 141, 0.2);
-        font-size: 20px;
         overflow: hidden;
         position: absolute;
         top: 80px;
@@ -68,8 +65,8 @@
             }
 
             &:hover {
-                color: white;
-                background-color: grey;
+                color: $light-color;
+                background-color: $dark-color-1;
             }
         }
 
@@ -86,4 +83,26 @@
         top: 20px;
     }
 
+}
+@include breakpoints(map-get($breakpoints, "viewport-sm")){
+    .dropdown{
+        width: 80px;
+        height: 50px;
+        & input{
+            font-size: 14px;
+            padding: 2px 5px;
+        }
+        & .options{
+            & .option {
+                padding: 5px;
+            }
+        }
+        &::before{
+            left: 55px;
+        }
+        &.opened::before {
+            transform: rotate(-225deg);
+            
+        }
+    }
 }

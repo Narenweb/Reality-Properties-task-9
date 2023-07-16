@@ -1,9 +1,3 @@
-$breakpoints:(
-    "viewport-sm":480px,
-    "viewport-md":769px,
-    "viewport-lg":930px,
-    "viewport-xl":1070px,
-);
 @mixin breakpoints($bp){
     @media (max-width:$bp){
       @content;
@@ -12,7 +6,7 @@ $breakpoints:(
 
 @mixin information-card($bg-color){
   width: 500px;
-  padding: 46px 124px 60px 50px;
+  padding: 46px 50px 60px;
   border-radius: 5px;
   background-color: $bg-color;
 }
@@ -29,6 +23,6 @@ $breakpoints:(
     background-color: transparent;
     transition: 0.2s ease-in;
     border: 2px solid $bg-color;
-    color: #004dff;
+    color: $primary-color;
   }
 }

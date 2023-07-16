@@ -14,8 +14,6 @@
             margin-bottom: 27px;
             .card-title {
                 margin-bottom: 20px;
-                margin-bottom: 25px;
-                font-size: 32px;
                 letter-spacing: -1px;
             }
 
@@ -23,7 +21,7 @@
                 margin-bottom: 20px;
                 font-size: 22px;
                 font-weight: bold;
-                color: #004dff;
+                color: $primary-color;
             }
 
             .card-description {
@@ -49,15 +47,13 @@
                 height: 50px;
             }
             .card-title{
-                font-size: 18px;
-                color: #454545;
+                color: $dark-color-1;
                  margin-left: 60px;
 
             }
             .card-position{
                 opacity: 0.7;
-                font-size: 14px;
-                color: #454545;
+                color: $dark-color-1;
                 margin-left: 60px;
                 display: inline;
             }
@@ -65,4 +61,17 @@
         
     }
 
+}
+@include breakpoints(map-get($breakpoints, "viewport-sm")) {
+.villa-section{
+    .container{
+        .villa-card{
+            width: 90%;
+            padding: 40px 50px 50px;
+        }
+        .contact-card{
+            width: 90%;
+        }
+    }
+}
 }

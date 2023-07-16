@@ -21,11 +21,6 @@ const input = document.querySelector('input');
 const listOfOptions = document.querySelectorAll('.option');
 const body = document.body;
 
-const toggleDropdown = (event) => {
-  dropdown.classList.toggle('opened');
-  event.stopPropagation();
-};
-
 const selectOption = (event) => {
   input.value = event.currentTarget.textContent;
 };
@@ -41,7 +36,11 @@ body.addEventListener('click', closeDropdown);
 listOfOptions.forEach((option) => {
   option.addEventListener('click', selectOption);
 });
-dropdown.addEventListener('click', toggleDropdown);
+dropdown.addEventListener('click',(event)=>{
+  dropdown.classList.toggle('opened');
+  event.stopPropagation();
+
+});
 
 
 

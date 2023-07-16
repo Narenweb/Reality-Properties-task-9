@@ -4,3 +4,32 @@
     padding: 0 20px;
     width: 100%;
 }
+$breakpoints:(
+    "viewport-sm":480px,
+    "viewport-md":769px,
+    "viewport-lg":930px,
+    "viewport-xl":1070px,
+);
+.font-sm{
+    font-size: 14px;
+}
+.font-md-1{
+    font-size: 18px;
+}
+.font-md{
+    font-size: 32px;
+}
+.font-lg{
+    font-size: 44px;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-space{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
