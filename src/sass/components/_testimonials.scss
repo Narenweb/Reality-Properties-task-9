@@ -4,7 +4,6 @@
         width: 100%;
         margin-left: 90px;
 
-
         .client-card {
             width: 350px;
             height: 500px;
@@ -228,7 +227,7 @@
         }
     }
 }
-@media(min-width:931px) and (max-width:1100px){
+@media(min-width:931px){
     .client-card-section {
         .card-wrapper {
             justify-content: flex-start;

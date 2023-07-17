@@ -136,7 +136,7 @@
    
 }
 }
-@media(min-width:481px){
+@media(min-width:481px) and (max-width:730px){
     .featured-property{
         h2{
             font-size: 25px;
@@ -184,7 +184,7 @@
 }
 }
 
-@media(min-width:700px) and (max-width:1075px){
+@media(min-width:731px) and (max-width:1075px){
     .featured-property{
         h2{
             font-size: 25px;
@@ -192,7 +192,7 @@
         }
     .card-wrapper{
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+        justify-items: center;
         .card {
               margin-left: 10px;
             .card-img {
@@ -233,6 +233,7 @@
 @media(min-width:1076px){
     .featured-property{
        .card-wrapper{
+        justify-items:center;
         grid-template-columns: repeat(3, 1fr);
        }
     }
