@@ -74,7 +74,7 @@ function goToSlide(index) {
 
     if (slideIndex === index) {
       slide.classList.add('active');
-         slide.style.transform += `translateY(-30px)`
+         slide.style.transform += `translateY(-10px)`
     } else {
       slide.classList.remove('active');
     }

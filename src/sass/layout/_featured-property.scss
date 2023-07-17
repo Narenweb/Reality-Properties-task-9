@@ -7,4 +7,29 @@
         color: $dark-color;
     }
 
-   }
+}
+
+@include breakpoints(map-get($breakpoints, "viewport-sm")) {
+    .featured-property{
+        margin-bottom: 100px;
+    }
+}
+@include breakpoints(map-get($breakpoints, "viewport-md")) {
+    .featured-property{
+        margin-bottom: 100px;
+    }
+}
+@include breakpoints(map-get($breakpoints, "viewport-lg")){
+    .featured-property{
+        h2{
+            text-align: center;
+        }
+    }
+}
+@media(min-width:931px) and (max-width:1100px){
+    .featured-property{
+        h2{
+            text-align: center;
+        }
+    }
+}

@@ -82,11 +82,35 @@
         transform: rotate(-225deg);
         top: 20px;
     }
-
 }
 @include breakpoints(map-get($breakpoints, "viewport-sm")){
     .dropdown{
         width: 80px;
+        height: 50px;
+        &::before{
+            width: 9px;
+            height: 9px;
+            left: 60px;
+        }
+        & input{
+            font-size: 14px;
+            padding: 2px 5px;
+        }
+        & .options{
+            & .option {
+                padding: 2px;
+            }
+        }
+        &.opened::before {
+            transform: rotate(-225deg);
+            
+        }
+    }
+}
+
+@media(min-width:481px) and (max-width:769px){   
+     .dropdown{
+        width: 100px;
         height: 50px;
         & input{
             font-size: 14px;
@@ -94,7 +118,7 @@
         }
         & .options{
             & .option {
-                padding: 5px;
+                padding: 2px;
             }
         }
         &::before{

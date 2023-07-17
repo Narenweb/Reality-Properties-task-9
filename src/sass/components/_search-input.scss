@@ -32,7 +32,31 @@
 @include breakpoints(map-get($breakpoints, "viewport-sm")) {
   .hero {
     .search-input {
-      width: 100%;
+      width: 230px;
+      font-size: 12px;
+      padding-left: 40px;
+    }
+    .search-container::before{
+      left:10px;
+    }
+  }
+}
+@media (max-width:$viewport-sm){
+  .hero {
+    .search-input {
+      width: 180px;
+      font-size: 10px;
+    }
+    .search-container::before{
+      left:10px;
+    }
+  }
+}
+
+@media(min-width:481px) and (max-width:769px)  {
+  .hero {
+    .search-input {
+      width: 300px;
       font-size: 13px;
       padding-left: 40px;
     }

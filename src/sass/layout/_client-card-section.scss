@@ -3,7 +3,8 @@
     position: relative;
     .container-box{
         overflow: hidden;
-        margin-left: 60px; 
+        // margin-left: 60px; 
+        width: 100%;
     
     }
     h2{
@@ -18,5 +19,20 @@
     .container-box{
         margin-left: 14px;
     }
+    h2{
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
 }
 }
+@media(min-width:481px) and (max-width:769px){
+    .client-card-section{
+        .container-box{
+            margin-left: 14px;
+        }
+        h2{
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    }
+    }

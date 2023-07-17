@@ -26,13 +26,25 @@
 }
 @include breakpoints(map-get($breakpoints, "viewport-sm")){
   .hero{
+    margin-bottom: 30px;
+    height:100vh;
     .hero-wrapper{
-      top: 35%;
       .hero-title{
         font-size: 33px;
       }
       .hero-description{
         font-size: 15px;
+      }
+    }
+  }
+}
+@include breakpoints(map-get($breakpoints, "viewport-md")){
+  .hero{
+    margin-bottom: 30px;
+    height:100vh;
+    .hero-wrapper{
+      .hero-description{
+        font-size: 20px;
       }
     }
   }

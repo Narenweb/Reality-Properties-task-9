@@ -121,9 +121,23 @@ a {
 }
 
 @media (max-width: 480px) {
+  .primary-btn-sm {
+    padding: 3px 20px;
+  }
   .primary-btn-md {
-    left: 50%;
-    padding: 15px 15px;
+    left: 70%;
+    bottom: 30px;
+    padding: 10px 15px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .primary-btn-sm {
+    padding: 3px 20px;
+  }
+  .primary-btn-md {
+    left: 80%;
+    bottom: 30px;
+    padding: 10px 15px;
   }
 }
 .dropdown {
@@ -208,12 +222,33 @@ a {
     width: 80px;
     height: 50px;
   }
+  .dropdown::before {
+    width: 9px;
+    height: 9px;
+    left: 60px;
+  }
   .dropdown input {
     font-size: 14px;
     padding: 2px 5px;
   }
   .dropdown .options .option {
-    padding: 5px;
+    padding: 2px;
+  }
+  .dropdown.opened::before {
+    transform: rotate(-225deg);
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .dropdown {
+    width: 100px;
+    height: 50px;
+  }
+  .dropdown input {
+    font-size: 14px;
+    padding: 2px 5px;
+  }
+  .dropdown .options .option {
+    padding: 2px;
   }
   .dropdown::before {
     left: 55px;
@@ -251,7 +286,26 @@ a {
 
 @media (max-width: 480px) {
   .hero .search-input {
-    width: 100%;
+    width: 230px;
+    font-size: 12px;
+    padding-left: 40px;
+  }
+  .hero .search-container::before {
+    left: 10px;
+  }
+}
+@media (max-width: 370px) {
+  .hero .search-input {
+    width: 180px;
+    font-size: 10px;
+  }
+  .hero .search-container::before {
+    left: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .hero .search-input {
+    width: 300px;
     font-size: 13px;
     padding-left: 40px;
   }
@@ -262,9 +316,10 @@ a {
 .client-card-section .card-wrapper {
   min-width: 2345px;
   width: 100%;
+  margin-left: 160px;
 }
 .client-card-section .card-wrapper .client-card {
-  width: 340px;
+  width: 400px;
   height: 500px;
   margin-top: 100px;
   padding: 50px 20px 0px;
@@ -280,7 +335,7 @@ a {
 .client-card-section .card-wrapper .client-card.active {
   z-index: 2;
   opacity: 1;
-  box-shadow: 1px 1px 3px 3px rgba(20, 20, 20, 0.4);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
   position: relative;
   height: 540px;
@@ -306,7 +361,7 @@ a {
   cursor: pointer;
 }
 .client-card-section .left {
-  left: 25px;
+  left: -20px;
 }
 .client-card-section .right {
   right: -20px;
@@ -315,22 +370,146 @@ a {
 @media (max-width: 480px) {
   .client-card-section .card-wrapper {
     justify-content: flex-start;
-    width: 100%;
+    margin-left: 0;
   }
   .client-card-section .card-wrapper .client-card {
-    width: 100%;
+    width: 380px;
+    text-align: center;
   }
-  .client-card-section .card-wrapper .client-card .card-title {
-    width: 100%;
+  .client-card-section .card-wrapper .client-card .card-profile {
+    width: 90px;
+    height: 90px;
   }
   .client-card-section .card-wrapper .client-card .card-description {
-    width: 70%;
+    width: 90%;
+  }
+  .client-card-section .card-wrapper .client-card.active {
+    height: 500px;
   }
   .client-card-section .left {
     left: 0;
   }
   .client-card-section .right {
     right: 0;
+    z-index: 2;
+  }
+}
+@media (max-width: 360px) {
+  .client-card-section .card-wrapper {
+    margin-left: 0;
+  }
+  .client-card-section .card-wrapper .client-card {
+    position: relative;
+    right: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .client-card-section .card-wrapper .client-card .card-profile {
+    width: 90px;
+    height: 90px;
+    margin-right: 70px;
+  }
+  .client-card-section .card-wrapper .client-card .card-title {
+    margin-right: 50px;
+  }
+  .client-card-section .card-wrapper .client-card .card-description {
+    width: 80%;
+  }
+  .client-card-section .card-wrapper .client-card.active {
+    height: 500px;
+  }
+}
+@media (min-width: 615px) and (max-width: 769px) {
+  .client-card-section .card-wrapper {
+    justify-content: flex-start;
+  }
+  .client-card-section .card-wrapper .client-card {
+    text-align: center;
+  }
+  .client-card-section .card-wrapper .client-card .card-profile {
+    width: 90px;
+    height: 90px;
+  }
+  .client-card-section .card-wrapper .client-card .card-description {
+    width: 90%;
+  }
+  .client-card-section .card-wrapper .client-card.active {
+    height: 500px;
+  }
+  .client-card-section .left {
+    left: 0;
+  }
+  .client-card-section .right {
+    right: 0;
+    z-index: 2;
+  }
+}
+@media (min-width: 481px) and (max-width: 616px) {
+  .client-card-section .card-wrapper {
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+  .client-card-section .card-wrapper .client-card {
+    text-align: center;
+  }
+  .client-card-section .left {
+    left: 0;
+  }
+  .client-card-section .right {
+    right: 0;
+    z-index: 2;
+  }
+}
+@media (min-width: 769px) and (max-width: 930px) {
+  .client-card-section .card-wrapper {
+    justify-content: flex-start;
+    margin-left: 180px;
+  }
+  .client-card-section .card-wrapper .client-card {
+    text-align: center;
+  }
+  .client-card-section .card-wrapper .client-card .card-profile {
+    width: 90px;
+    height: 90px;
+  }
+  .client-card-section .card-wrapper .client-card .card-description {
+    width: 90%;
+  }
+  .client-card-section .card-wrapper .client-card.active {
+    height: 550px;
+  }
+  .client-card-section .left {
+    left: 0;
+  }
+  .client-card-section .right {
+    right: 0;
+    z-index: 2;
+  }
+}
+@media (min-width: 931px) and (max-width: 1100px) {
+  .client-card-section .card-wrapper {
+    justify-content: flex-start;
+    margin-left: 270px;
+  }
+  .client-card-section .card-wrapper .client-card {
+    text-align: center;
+  }
+  .client-card-section .card-wrapper .client-card .card-profile {
+    width: 90px;
+    height: 90px;
+  }
+  .client-card-section .card-wrapper .client-card .card-description {
+    width: 90%;
+  }
+  .client-card-section .card-wrapper .client-card.active {
+    height: 550px;
+  }
+  .client-card-section .left {
+    left: 0;
+  }
+  .client-card-section .right {
+    right: 0;
+    z-index: 2;
   }
 }
 .villa-label {
@@ -359,6 +538,11 @@ a {
   color: #ffffff;
 }
 
+@media (min-width: 481px) and (max-width: 769px) {
+  .villa-label {
+    padding: 15px 30px;
+  }
+}
 .featured-property .card-wrapper {
   flex-wrap: wrap;
 }
@@ -405,7 +589,7 @@ a {
 .card-beds::before {
   content: "";
   background-image: url("https://i.postimg.cc/tJy3BqMW/icon-1.png");
-  margin-right: 15px;
+  margin-right: 10px;
   background-size: cover;
   width: 35px;
   height: 25px;
@@ -416,7 +600,7 @@ a {
   content: "";
   background-image: url("https://i.postimg.cc/HsFxmZTP/icon-2.png");
   background-size: cover;
-  width: 50px;
+  width: 45px;
   height: 50px;
   display: inline-block;
   position: relative;
@@ -427,7 +611,7 @@ a {
   content: "";
   background-image: url("https://i.postimg.cc/g0HkvG8f/icon-3.png`");
   background-size: cover;
-  margin-right: 15px;
+  margin-right: 10px;
   width: 35px;
   height: 35px;
   display: inline-block;
@@ -436,6 +620,13 @@ a {
 }
 
 @media (max-width: 480px) {
+  .featured-property h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .featured-property .card-wrapper {
+    justify-content: center;
+  }
   .featured-property .card-wrapper .card {
     width: 100%;
     height: 420px;
@@ -443,6 +634,63 @@ a {
   .featured-property .card-wrapper .card .card-img {
     width: 100%;
     height: 200px;
+  }
+  .featured-property .card-wrapper .card .card-body {
+    text-align: center;
+    padding: 19px 7px 50px;
+  }
+  .featured-property .card-wrapper .card .card-body .card-description {
+    margin-bottom: 4px;
+  }
+  .card-beds::before {
+    margin-right: 1px;
+  }
+  .card-baths::before {
+    margin-right: 1px;
+    width: 40px;
+  }
+  .card-sqft::before {
+    margin-right: 1px;
+    width: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .featured-property h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .featured-property .card-wrapper {
+    justify-content: center;
+  }
+  .featured-property .card-wrapper .card {
+    margin-left: 10px;
+  }
+  .featured-property .card-wrapper .card .card-img {
+    width: 100%;
+    height: 200px;
+  }
+  .featured-property .card-wrapper .card .card-body {
+    text-align: center;
+    padding: 19px 7px 50px;
+  }
+  .featured-property .card-wrapper .card .card-body .card-description {
+    margin-bottom: 4px;
+  }
+  .card-beds::before {
+    margin-right: 10px;
+  }
+  .card-baths::before {
+    margin-right: 10px;
+    width: 40px;
+  }
+  .card-sqft::before {
+    margin-right: 10px;
+    width: 20px;
+  }
+}
+@media (min-width: 931px) and (max-width: 1100px) {
+  .featured-property .card-wrapper {
+    justify-content: space-evenly;
   }
 }
 .navbar {
@@ -614,6 +862,20 @@ a {
     transform: translate(0px, -8px) rotate(45deg);
   }
 }
+@media (max-width: 930px) {
+  .navbar {
+    margin-top: 0;
+  }
+  .navbar .container > a img {
+    width: 130px;
+  }
+  .navbar .container nav .nav-center {
+    width: 100%;
+  }
+  .navbar .container nav .nav-center li:not(:last-child) {
+    margin-right: 20px;
+  }
+}
 .hero {
   background-image: url("https://i.postimg.cc/Gt20TCxJ/background.png");
   background-size: cover;
@@ -637,14 +899,24 @@ a {
 }
 
 @media (max-width: 480px) {
-  .hero .hero-wrapper {
-    top: 35%;
+  .hero {
+    margin-bottom: 30px;
+    height: 100vh;
   }
   .hero .hero-wrapper .hero-title {
     font-size: 33px;
   }
   .hero .hero-wrapper .hero-description {
     font-size: 15px;
+  }
+}
+@media (max-width: 769px) {
+  .hero {
+    margin-bottom: 30px;
+    height: 100vh;
+  }
+  .hero .hero-wrapper .hero-description {
+    font-size: 20px;
   }
 }
 .featured-property {
@@ -656,6 +928,26 @@ a {
   color: #000;
 }
 
+@media (max-width: 480px) {
+  .featured-property {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 769px) {
+  .featured-property {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 930px) {
+  .featured-property h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 931px) and (max-width: 1100px) {
+  .featured-property h2 {
+    text-align: center;
+  }
+}
 .property-information {
   margin-bottom: 100px;
 }
@@ -692,12 +984,17 @@ a {
 }
 
 @media (max-width: 480px) {
+  .property-information {
+    margin-bottom: 50px;
+  }
   .property-information .information-card-wrapper {
     flex-direction: column;
+    text-align: center;
   }
   .property-information .information-card-wrapper .information-card {
-    padding: 46px 30px 60px;
+    padding: 46px 30px;
     width: 100%;
+    margin-bottom: 20px;
   }
   .property-information .information-card-wrapper .information-card h2 {
     width: 100%;
@@ -708,6 +1005,53 @@ a {
   }
   .property-information .information-card-wrapper .contact-card h2 {
     width: 100%;
+    font-size: 30px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .property-information {
+    margin-bottom: 50px;
+  }
+  .property-information .information-card-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .property-information .information-card-wrapper .information-card {
+    padding: 46px 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .property-information .information-card-wrapper .information-card h2 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .property-information .information-card-wrapper .contact-card {
+    width: 100%;
+  }
+  .property-information .information-card-wrapper .contact-card h2 {
+    width: 100%;
+    font-size: 35px;
+  }
+}
+@media (max-width: 930px) {
+  .property-information .information-card-wrapper {
+    text-align: center;
+  }
+  .property-information .information-card-wrapper .information-card {
+    padding: 46px 30px;
+    width: 100%;
+  }
+  .property-information .information-card-wrapper .information-card h2 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .property-information .information-card-wrapper .contact-card {
+    width: 100%;
+    padding: 46px 30px;
+  }
+  .property-information .information-card-wrapper .contact-card h2 {
+    width: 100%;
+    font-size: 35px;
   }
 }
 .villa-section {
@@ -772,12 +1116,37 @@ a {
 }
 
 @media (max-width: 480px) {
+  .villa-section {
+    margin-bottom: 40px;
+  }
   .villa-section .container .villa-card {
     width: 90%;
-    padding: 40px 50px 50px;
+    padding: 40px 0px 50px;
+    top: 100px;
+    text-align: center;
+  }
+  .villa-section .container .villa-card .card-title {
+    font-size: 23px;
   }
   .villa-section .container .contact-card {
+    top: 500px;
     width: 90%;
+    padding: 24px 12px 30px 5px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .villa-section {
+    margin-bottom: 40px;
+  }
+  .villa-section .container .villa-card {
+    width: 95%;
+    padding: 40px 0px 50px;
+    top: 100px;
+    text-align: center;
+  }
+  .villa-section .container .contact-card {
+    top: 500px;
+    width: 95%;
   }
 }
 .client-card-section {
@@ -786,7 +1155,7 @@ a {
 }
 .client-card-section .container-box {
   overflow: hidden;
-  margin-left: 60px;
+  width: 100%;
 }
 .client-card-section h2 {
   font-weight: bold;
@@ -798,6 +1167,19 @@ a {
 @media (max-width: 480px) {
   .client-card-section .container-box {
     margin-left: 14px;
+  }
+  .client-card-section h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  .client-card-section .container-box {
+    margin-left: 14px;
+  }
+  .client-card-section h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
   }
 }
 footer {

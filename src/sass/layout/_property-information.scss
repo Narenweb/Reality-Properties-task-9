@@ -40,11 +40,14 @@
 
 @include breakpoints(map-get($breakpoints, "viewport-sm")) {
     .property-information{
+        margin-bottom: 50px;
         .information-card-wrapper{
             flex-direction: column;
+            text-align: center;
             .information-card{
-                padding: 46px 30px 60px;
+                padding: 46px 30px;
                 width: 100%;
+                margin-bottom: 20px;
                 h2{
                     width: 100%;
                     font-size: 22px;
@@ -54,6 +57,59 @@
                 width: 100%;
                 h2{
                     width: 100%;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:481px) and (max-width:769px) {
+    .property-information{
+        margin-bottom: 50px;
+        .information-card-wrapper{
+            flex-direction: column;
+            text-align: center;
+            .information-card{
+                padding: 46px 30px;
+                width: 100%;
+                margin-bottom: 20px;
+                h2{
+                    width: 100%;
+                    font-size: 30px;
+                }
+            }
+            .contact-card{
+                width: 100%;
+                h2{
+                    width: 100%;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+@include breakpoints(map-get($breakpoints, "viewport-lg")){
+    .property-information{
+        // margin-bottom: 50px;
+        .information-card-wrapper{
+            // flex-direction: column;
+            text-align: center;
+            .information-card{
+                padding: 46px 30px;
+                width: 100%;
+                h2{
+                    width: 100%;
+                    font-size: 30px;
+                }
+            }
+            .contact-card{
+                width: 100%;
+                padding: 46px 30px;
+                h2{
+                    width: 100%;
+                    font-size: 35px;
                 }
             }
         }

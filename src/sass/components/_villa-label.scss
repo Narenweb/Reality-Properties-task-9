@@ -10,3 +10,8 @@
     color: $light-color;
    }
 }
+@media(min-width:481px) and (max-width:769px){
+    .villa-label{
+        padding: 15px 30px;
+    }
+}

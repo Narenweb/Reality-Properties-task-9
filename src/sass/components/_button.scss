@@ -23,8 +23,22 @@
     }
 }
 @include breakpoints(map-get($breakpoints, "viewport-sm")){
- .primary-btn-md{
-    left:50%;
-    padding: 15px 15px;
+ .primary-btn-sm{
+    padding: 3px 20px;
+ }
+    .primary-btn-md{
+    left:70%;
+    bottom:30px;
+    padding: 10px 15px;
  }
 }
+@media(min-width:481px) and (max-width:769px){
+    .primary-btn-sm{
+       padding: 3px 20px;
+    }
+       .primary-btn-md{
+       left:80%;
+       bottom:30px;
+       padding: 10px 15px;
+    }
+   }
