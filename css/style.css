@@ -691,7 +691,7 @@ a {
     width: 20px;
   }
 }
-@media (min-width: 731px) and (max-width: 1075px) {
+@media (min-width: 730px) and (max-width: 1075px) {
   .featured-property h2 {
     font-size: 25px;
     text-align: center;
