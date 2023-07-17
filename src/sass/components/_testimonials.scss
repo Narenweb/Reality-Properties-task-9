@@ -55,11 +55,11 @@
     }
 
     .left {
-        left: -20px;
+        left: -10px;
     }
 
     .right {
-        right: -20px;
+        right: -10px;
     }
 }
 
@@ -104,8 +104,6 @@
     .client-card-section {
         .card-wrapper {
             margin-left: 0;
-
-            //   width: 100%;
             .client-card {
                 position: relative;
                 right: 30px;
@@ -141,7 +139,6 @@
             justify-content: flex-start;
 
             .client-card {
-                // width: 180px;
                 text-align: center;
 
                 .card-profile {
@@ -227,7 +224,7 @@
         }
     }
 }
-@media(min-width:931px){
+@media(min-width:931px) and (max-width:1124px){
     .client-card-section {
         .card-wrapper {
             justify-content: flex-start;
