@@ -20,13 +20,20 @@ footer {
 
     }
 }
-
+@include breakpoints(map-get($breakpoints, "viewport-md")) {
+    footer {
+        p {
+            width: 100%;
+        }
+    }
+}
 @include breakpoints(map-get($breakpoints, "viewport-sm")) {
     footer {
         img {
             margin-right: 30px;
         }
-        p{
+
+        p {
             width: 100%;
         }
     }

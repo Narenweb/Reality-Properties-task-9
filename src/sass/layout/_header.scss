@@ -17,7 +17,7 @@
             display: flex;
             align-items: center;
 
-            .nav-center {
+            & .nav-center {
                 display: flex;
                 align-items: center;
 
@@ -60,6 +60,9 @@
 
                 img {
                     width: 20px;
+                }
+                svg:hover path{
+                    fill: rgb(80, 223, 45);
                 }
             }
         }

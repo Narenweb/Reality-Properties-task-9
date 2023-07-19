@@ -6,14 +6,8 @@ hamburger.addEventListener('click',()=>{
     navCenter.classList.toggle('nav-active');
 })
 document.addEventListener('scroll',()=>{
-    const position=window.scrollY;
-    if(position){
         navbar.classList.add("navbar-fixed");
-    }
-    else{
-        navbar.classList.remove("navbar-fixed");
-    }
-})
+});
 
 //Dropdown
 const dropdown = document.querySelector('.dropdown');
@@ -38,7 +32,7 @@ listOfOptions.forEach((option) => {
 });
 dropdown.addEventListener('click',(event)=>{
   dropdown.classList.toggle('opened');
-  event.stopPropagation();
+  event.stopPropagation(); //It can also event.preventDefault();
 
 });
 
@@ -64,7 +58,7 @@ nextButton.addEventListener('click', () => {
 function goToSlide(index) {
   if (index < 0) {
     index = slides.length - 1;
-  } else if (index >= slides.length) {
+  } else if (index >= slides.length) { 
     index = 0;
   }
 

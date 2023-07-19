@@ -2,66 +2,60 @@
   .search-container {
     position: relative;
     display: inline-block;
-  }
 
-  .search-input {
-    width: 405px;
-    height: 50px;
-    padding-left: 70px;
-    color: $dark-color-1;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: none;
-    outline: none;
-  }
+    svg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      left: 20px;
+    }
 
-  .search-container::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 27px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('https://i.postimg.cc/mr5ppHYM/search.png');
-    background-size: cover;
-    cursor: pointer;
+    .search-input {
+      width: 405px;
+      height: 50px;
+      padding-left: 50px;
+      color: $dark-color-1;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: none;
+      outline: none;
+    }
   }
 }
 
 @include breakpoints(map-get($breakpoints, "viewport-sm")) {
   .hero {
-    .search-input {
-      width: 230px;
-      font-size: 12px;
-      padding-left: 40px;
-    }
-    .search-container::before{
-      left:10px;
-    }
-  }
-}
-@media (max-width:$viewport-sm){
-  .hero {
-    .search-input {
-      width: 180px;
-      font-size: 10px;
-    }
-    .search-container::before{
-      left:10px;
+    .search-container {
+      .search-input {
+        width: 230px;
+        font-size: 12px;
+        padding-left: 40px;
+      }
     }
   }
 }
 
-@media(min-width:481px) and (max-width:769px)  {
+@media (max-width:$viewport-sm) {
   .hero {
+    .search-container {
+      .search-input {
+        width: 180px;
+        font-size: 10px;
+      }
+
+    }
+  }
+}
+
+@media(min-width:481px) and (max-width:769px) {
+  .hero {
+    .search-container {
     .search-input {
       width: 300px;
       font-size: 13px;
       padding-left: 40px;
     }
-    .search-container::before{
-      left:10px;
-    }
+  }
   }
 }

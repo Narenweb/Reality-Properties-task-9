@@ -261,56 +261,42 @@ a {
   position: relative;
   display: inline-block;
 }
-.hero .search-input {
+.hero .search-container svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 20px;
+}
+.hero .search-container .search-input {
   width: 405px;
   height: 50px;
-  padding-left: 70px;
+  padding-left: 50px;
   color: #454545;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: none;
   outline: none;
 }
-.hero .search-container::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 27px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-image: url("https://i.postimg.cc/mr5ppHYM/search.png");
-  background-size: cover;
-  cursor: pointer;
-}
 
 @media (max-width: 480px) {
-  .hero .search-input {
+  .hero .search-container .search-input {
     width: 230px;
     font-size: 12px;
     padding-left: 40px;
   }
-  .hero .search-container::before {
-    left: 10px;
-  }
 }
 @media (max-width: 370px) {
-  .hero .search-input {
+  .hero .search-container .search-input {
     width: 180px;
     font-size: 10px;
   }
-  .hero .search-container::before {
-    left: 10px;
-  }
 }
 @media (min-width: 481px) and (max-width: 769px) {
-  .hero .search-input {
+  .hero .search-container .search-input {
     width: 300px;
     font-size: 13px;
     padding-left: 40px;
-  }
-  .hero .search-container::before {
-    left: 10px;
   }
 }
 .client-card-section .card-wrapper {
@@ -549,7 +535,7 @@ a {
 }
 .featured-property .card-wrapper .card {
   width: 345px;
-  height: 420px;
+  height: 400px;
   margin-bottom: 30px;
   border-radius: 20px;
   border: solid 2px #f0f0f1;
@@ -578,46 +564,29 @@ a {
   color: #004dff;
 }
 .featured-property .card-wrapper .card .card-body .card-description {
-  margin-bottom: 11px;
+  margin-bottom: 21px;
 }
 
-.details {
-  display: inline;
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+.icon-container span {
   opacity: 0.7;
-  color: #454545;
 }
-
-.card-beds::before {
-  content: "";
-  background-image: url("https://i.postimg.cc/tJy3BqMW/icon-1.png");
-  margin-right: 10px;
-  background-size: cover;
-  width: 35px;
-  height: 25px;
-  display: inline-block;
+.icon-container svg {
+  margin-right: 5px;
 }
-
-.card-baths::before {
-  content: "";
-  background-image: url("https://i.postimg.cc/HsFxmZTP/icon-2.png");
-  background-size: cover;
-  width: 45px;
-  height: 50px;
-  display: inline-block;
+.icon-container svg:hover path {
+  stroke: #75C2F6;
+}
+.icon-container .icon-baths {
+  display: flex;
+  justify-content: center;
+}
+.icon-container .icon-baths svg {
   position: relative;
-  top: 13px;
-}
-
-.card-sqft::before {
-  content: "";
-  background-image: url("https://i.postimg.cc/g0HkvG8f/icon-3.png`");
-  background-size: cover;
-  margin-right: 10px;
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  position: relative;
-  top: 5px;
+  top: -4px;
 }
 
 @media (max-width: 480px) {
@@ -641,22 +610,11 @@ a {
     text-align: center;
     padding: 19px 7px 50px;
   }
-  .featured-property .card-wrapper .card .card-body .card-description {
-    margin-bottom: 4px;
-  }
-  .card-beds::before {
-    margin-right: 1px;
-  }
-  .card-baths::before {
-    margin-right: 1px;
-    width: 40px;
-  }
-  .card-sqft::before {
-    margin-right: 1px;
-    width: 20px;
+  .icon-container {
+    justify-content: space-around;
   }
 }
-@media (min-width: 481px) and (max-width: 730px) {
+@media (min-width: 481px) and (max-width: 735px) {
   .featured-property h2 {
     font-size: 25px;
     text-align: center;
@@ -676,22 +634,11 @@ a {
     text-align: center;
     padding: 19px 7px 50px;
   }
-  .featured-property .card-wrapper .card .card-body .card-description {
-    margin-bottom: 4px;
-  }
-  .card-beds::before {
-    margin-right: 10px;
-  }
-  .card-baths::before {
-    margin-right: 10px;
-    width: 40px;
-  }
-  .card-sqft::before {
-    margin-right: 10px;
-    width: 20px;
+  .icon-container {
+    justify-content: space-around;
   }
 }
-@media (min-width: 730px) and (max-width: 1075px) {
+@media (min-width: 736px) and (max-width: 1075px) {
   .featured-property h2 {
     font-size: 25px;
     text-align: center;
@@ -710,20 +657,6 @@ a {
   .featured-property .card-wrapper .card .card-body {
     text-align: center;
     padding: 19px 7px 50px;
-  }
-  .featured-property .card-wrapper .card .card-body .card-description {
-    margin-bottom: 4px;
-  }
-  .card-beds::before {
-    margin-right: 10px;
-  }
-  .card-baths::before {
-    margin-right: 10px;
-    width: 40px;
-  }
-  .card-sqft::before {
-    margin-right: 10px;
-    width: 20px;
   }
 }
 @media (min-width: 1076px) {
@@ -778,6 +711,9 @@ a {
 }
 .navbar .container .nav-end a img {
   width: 20px;
+}
+.navbar .container .nav-end a svg:hover path {
+  fill: rgb(80, 223, 45);
 }
 .navbar .container .hamburger {
   display: none;
@@ -1122,7 +1058,7 @@ a {
   color: #004dff;
 }
 .villa-section .container .villa-card .card-description {
-  margin-bottom: 11px;
+  margin-bottom: 21px;
   font-size: 17px;
 }
 .villa-section .container .contact-card {
@@ -1187,6 +1123,9 @@ a {
     top: 500px;
     width: 95%;
   }
+  .icon-container {
+    justify-content: space-around;
+  }
 }
 .client-card-section {
   margin-bottom: 100px;
@@ -1241,6 +1180,11 @@ footer p {
   width: 730px;
 }
 
+@media (max-width: 769px) {
+  footer p {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   footer img {
     margin-right: 30px;
