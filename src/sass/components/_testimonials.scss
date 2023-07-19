@@ -100,13 +100,13 @@
     }
 }
 
-@media (max-width:$viewport-xsm) {
+@media (max-width:360px) {
     .client-card-section {
         .card-wrapper {
             margin-left: 0;
             .client-card {
                 position: relative;
-                right: 30px;
+                right: 15px;
                 max-width: 100%;
                 text-align: center;
 

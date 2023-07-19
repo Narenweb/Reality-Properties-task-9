@@ -286,7 +286,7 @@ a {
     padding-left: 40px;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 350px) {
   .hero .search-container .search-input {
     width: 180px;
     font-size: 10px;
@@ -386,7 +386,7 @@ a {
   }
   .client-card-section .card-wrapper .client-card {
     position: relative;
-    right: 30px;
+    right: 15px;
     max-width: 100%;
     text-align: center;
   }
