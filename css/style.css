@@ -575,9 +575,6 @@ a {
   opacity: 0.7;
   font-size: 14px;
 }
-.icon-container svg:hover path {
-  stroke: #75C2F6;
-}
 .icon-container .icon-beds {
   display: flex;
 }
