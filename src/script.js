@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded',()=>{
 const hamburger = document.querySelector('.hamburger');
 const navCenter = document.querySelector('.nav-center')
 const navbar= document.querySelector('.navbar')
@@ -76,7 +77,7 @@ function goToSlide(index) {
 
   currentIndex = index;
 }
-
+});
 
 
 
